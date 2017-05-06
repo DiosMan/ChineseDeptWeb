@@ -1,0 +1,80 @@
+.sidebar-module {
+  padding: 15px;
+  margin: 0 -15px 15px;
+}
+body{
+	background-image: url("../img/bgpattern.gif") ;
+    
+    
+}
+.logo{
+	float: left;
+	margin-top: 50px;
+	margin-left: 124px;
+	margin-bottom: 5px;
+}
+.ban{
+	float: left;
+	margin-left: 100px;
+	margin-top: 25px;
+	
+}
+nav ul{
+	width: 1100px;
+            border: 1px solid #000;
+            margin:15px auto 0px;
+            list-style: none;
+            position: relative;
+}
+
+nav ul li{
+	float: left;
+}
+
+
+nav ul li a{
+	width: 120px;
+	height: 28px;
+	margin:5px 10px;
+	display: block;
+
+}
+nav ul li ul{
+	position: absolute;
+	width: 100px;
+	padding-left: 0px;
+	display: none;
+	border: none;
+}
+
+nav ul li ul li{
+	background:#B4241D;
+	display: block;
+
+}
+nav ul li ul li a{
+            color: orange;
+            font-size: 15px;
+	          text-align: center;
+	          display: block !important;
+            
+}
+nav ul li ul li a:hover{
+	background: #A8221B;
+	color: white;
+}
+nav ul li:hover ul{
+	display: block;
+}
+.index_pic img{
+	text-align: center;
+	width: 70%;
+	
+}
+footer{
+	text-align: center;
+}
+
+.hr{
+    color: dimgray;
+}

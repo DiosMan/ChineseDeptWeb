@@ -1,0 +1,57 @@
+.uccontents{
+    
+    margin-left: 70px;
+}
+
+
+
+.ucevents{
+	
+	
+	text-align: center;
+}
+
+
+.courses-header{
+	padding-top: 20px;
+	padding-bottom: 10px;
+	margin-left:60px;
+}
+.courses-tittle{
+	margin-top: 10px;
+	font-size: 60px;
+	font-weight: normal;
+	margin-left: 70px;
+}
+
+.cources-descrip{
+	font-size: 20px;
+	color: #999;
+            margin-left:70px;
+}
+
+.cources-info{
+	font-size: 20px;
+	margin-left: 100px;
+	margin-right: 200px;
+
+}
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+  margin-top: 0;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  color: #333;
+}
+hr{
+	color: black;
+}
+pre
+{
+	background-color: gray;
+}
