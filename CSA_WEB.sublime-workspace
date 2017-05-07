@@ -93,7 +93,7 @@
 			],
 			[
 				"in",
-				"index	(2011speech.htm)"
+				"index	(2011speech.html)"
 			],
 			[
 				"lo",
@@ -105,7 +105,7 @@
 			],
 			[
 				"M",
-				"Mandarin	(2011speech.htm)"
+				"Mandarin	(2011speech.html)"
 			],
 			[
 				"mar",
@@ -296,7 +296,7 @@
 			}
 		},
 		{
-			"file": "speechcontest/speech.htm",
+			"file": "speechcontest/speech.html",
 			"settings":
 			{
 				"buffer_size": 4255,
@@ -433,7 +433,7 @@
 		"/Volumes/Transcend/CHIN WEB/index.html",
 		"/Volumes/Transcend/CHIN WEB/css/main.css",
 		"/Volumes/Transcend/CHIN WEB/main.css",
-		"/Volumes/Transcend/CHIN WEB/2011speech.htm",
+		"/Volumes/Transcend/CHIN WEB/2011speech.html",
 		"/Volumes/Transcend/CHIN WEB/new_index.html",
 		"/Volumes/Transcend/CHIN WEB/CSA_WEB.sublime-project",
 		"/Volumes/Transcend/CHIN WEB/2011webmaster.htm",
@@ -809,7 +809,7 @@
 				},
 				{
 					"buffer": 9,
-					"file": "speechcontest/speech.htm",
+					"file": "speechcontest/speech.html",
 					"semi_transient": true,
 					"settings":
 					{

@@ -1,38 +1,40 @@
 <html>
        
-    <HEAD>
-    <TITLE>Speech Contests!</TITLE>
+    <head>
+    <title>Speech Contests!</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <META content="Microsoft FrontPage 5.0" name=GENERATOR>
-
     <style>
     
         .responsive{
-            width:50%;
-            padding: 0 6px;
-            padding-left: 5px;
-            float:left;
-            
+            width:  60%;
+            left: 5%;
+            margin: 20px auto;  
+            -webkit-transition: 0.3s ease-out;
+            -moz-transition: 0.3s ease-out;
+            -o-transition: 0.3s ease-out;
+        }
+        
+        .responsive:hover{
+            width: 63%;
         }
         
         
         @media only screen and (max-width: 500px){
             .responsive {
-                width: 90%;
+                width: 75%;
             }
         }
 
         
         div.img{
             border-radius: 10px;
-            border: 1px solid #ccc;
+            cursor: pointer;   
         }
         
         
         div.img:hover{
-            border:2px solid #777;
-            margin: -1;
+            border: 2px solid #777;
         }
         
         div.img img{
@@ -62,7 +64,7 @@
             margin: auto;
             display: block;
             width: 80%;
-            max-width: 700px;
+            max-width: 1000px;
         }
 
         
@@ -103,9 +105,9 @@
     </style>
 
 
-</HEAD>
+</head>
 
-<BODY bgColor=#e6d7ba background="http://voyager.dvc.edu/~slin/2011style/bgpattern.gif">
+<body bgColor=#e6d7ba background="http://voyager.dvc.edu/~slin/2011style/bgpattern.gif">
 
 
     <link rel="stylesheet" type="text/css" href="../css/main.css">
@@ -120,7 +122,7 @@
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
-
+    <script src="../js/jquery-3.2.1.min.js"></script>
 
 
 
@@ -156,7 +158,7 @@
                 <li>
                     <a href=""><img src="../img/bottoms/speechcontbutton.jpg"></a>
                     <ul>
-                        <li><a href="../speechcontest/speech.htm">Contest Info</a></li>
+                        <li><a href="../speechcontest/speech.html">Contest Info</a></li>
                         <li><a href="http://voyager.dvc.edu/~slin/2011style/2011chachaphotomain.htm">Picture Gallery</a></li>
                     </ul>
                 </li>
@@ -184,110 +186,94 @@
 
 <!--Tittle-->
 
-<h2 style="text-align:center">2016 Chinese Speech Contest</h2>
+<h2 style="text-align:center" id="top">2016 Chinese Speech Contest</h2>
 <br>
 
 <!--Pictures-->
 
-
-<div class = "responsive">
-   <div class = "img">
-         <img src="../speechcontest/2016SpeechPics/Picture1.png" alt="">
-          
-   </div>
-    
-    
-</div>
-
-<div class = "responsive">
-   <div class = "img">
-         <img src="../speechcontest/2016SpeechPics/Picture2.png" alt="">
-          
-       
-   </div>
-    
-</div>    
-<div class = "responsive">
-   <div class = "img">
-         <img src="../speechcontest/2016SpeechPics/Picture3.png" alt="">
-          
-   </div>
-    
-    
-</div>
-   
-           
-<div class = "responsive">
-   <div class = "img">
-         <img src="../speechcontest/2016SpeechPics/Picture4.png" alt="">
-                 
-   </div>
-    
-    
-</div>  
-   
-     <div class = "responsive">
-   <div class = "img">
-         <img src="../speechcontest/2016SpeechPics/Picture5.png" alt="">
-                 
-   </div>
-    
-    
-</div>   
-<div class = "responsive">
-   <div class = "img">
-         <img src="../speechcontest/2016SpeechPics/Picture6.png" alt="">
-                 
-   </div>
-    
-    
-</div>
-   
-
-        <h2 style="text-align:center; padding-top:5px;">To Download Picture :
-        <a href="../speechcontest/2016SpeechPics.zip">Click here</a> </h2>
+    <div id="container"></div>
+    <h2 style="text-align:center; padding-top:5px;">To Download Picture :
+    <a href="../speechcontest/2016SpeechPics.zip">Click here</a> </h2>
     
 <!--The  Modal   -->
     
 <div id="myModal" class="modal">
-   <span class="close" style="color:white;font-size:40px">x</span>
+    <span class="close" style="color:white;font-size:40px">x</span>
     <img class="modal-content" id="img01">
-    
 </div>
 
+<!--  Go to top  -->
+<div class="upButton" id="upButton">
+    <h4>Top</h4>
+</div>
+    
 <!--The Script for Modal-->
                 <script>
 
+//load image from folder
                     
-                    //get the modal
-                    var modal =document.getElementById('myModal');
-                    //get the span element to close the modal
-                    var span = document.getElementsByClassName("close")[0];
-                    //when the user click the x span close the modal
-                    span.onclick=function()
-                    {
-                        modal.style.display="none";
-                    }
-                    //get all img and insert the click img inside the model
-                    var images = document.getElementsByTagName('img');
-                    var modalImg = document.getElementById("img01");
-                    var i;
-                    for (i=0;i<images.length;i++)
-                        {
-                            images[i].onclick=function()
-                            {
-                                modal.style.display="block";
-                                modalImg.src=this.src;
-                                modalImg.alt=this.alt;
-                                
-                            }
+                    var dir = "../speechcontest/2016SpeechPics/CLTAC2016/";
+                    var fileextension = ".jpg";
+                    $.ajax({
+                        type:"GET",
+                        url: dir,
+                        success: function(data) {
+                            $(data).find(" a:contains(" + fileextension + ")").each(function(){
+                                var filename = this.href.replace(window.location.host, "").replace("http://","");
+                                $("#container").append("<div class = 'responsive'><div class = 'img'><img src='"+filename+"' id='pic'></div></div>");
+                            });
                         }
+                    });
+
                     
+//Zoom animation                    
+                    $(document).ready(function(){
+                    
+                        //get the modal
+                        var modal =document.getElementById('myModal');
+                        //get the span element to close the modal
+                        var span = document.getElementsByClassName("close")[0];
+                        //when the user click the x span close the modal
+                        span.onclick=function()
+                        {
+                            modal.style.display="none";
+                        }
+                        //get all img and insert the click img inside the model
+                        var images = document.getElementsByTagName('img');
+                        var modalImg = document.getElementById("img01");
+                        var i;
+
+                        $(document).on('click', '#pic', function(){
+                            modal.style.display="block";
+                            modalImg.src=this.src;
+                            modalImg.alt=this.alt;
+                        })
+                    })
+                    
+//Go to Top
+                    $(document).ready(function(){
+                    $(window).scroll(function(){
+                        if($(this).scrollTop()>100){
+                            $("#upButton").fadeIn(600);
+                        }
+                        else{
+                            $("#upButton").fadeOut(600);
+                        }
+                    });
+
+                    $("#upButton").click(function(){
+                    $('html, body').animate({
+                        scrollTop: $("#top").offset().top
+                    }, 1500);
+                    return false;
+                });
+
+                });
 
                 </script>
 
 
-</BODY>
+</body>
     
 <hr>
    <footer>@Diablo Valley College 2017</footer>    
