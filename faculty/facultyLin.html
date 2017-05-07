@@ -13,6 +13,7 @@
 
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="../js/jquery-3.2.1.min.js"></script>
     <title>Cha Cha Mandarin</title>
 
 
@@ -37,13 +38,6 @@
             font-size: 16px;
         }
     </style>
-
-
-
-
-
-
-
 
 
 
@@ -117,7 +111,10 @@
 
 <!--content-->
    
-    <div class="container">
+    <div class="container" id="top">
+        <div class="upButton" id="upButton">
+            <h4>Top</h4>
+        </div>
         <hr>
         <div class="profileImg">
             <img src="http://voyager.dvc.edu/%7Eslin/image/facultylin/lin.jpg" alt="Lin">
@@ -327,10 +324,27 @@
     
     </div>
 
+    <script>
+        $(document).ready(function(){
+            $(window).scroll(function(){
+                if($(this).scrollTop()>100){
+                    $("#upButton").fadeIn(600);
+                }
+                else{
+                    $("#upButton").fadeOut(600);
+                }
+            });
 
+            $("#upButton").click(function(){
+            $('html, body').animate({
+                scrollTop: $("#top").offset().top
+            }, 1500);
+            return false;
+        });
 
+        });
+            </script>
 
-
-
+</body>
 
 </html>
