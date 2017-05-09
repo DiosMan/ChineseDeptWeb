@@ -1,0 +1,297 @@
+<html>
+       
+    <head>
+    <title>Speech Contests!</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+    
+        .responsive{
+            width:  60%;
+            left: 5%;
+            margin: 20px auto;  
+            -webkit-transition: 0.3s ease-out;
+            -moz-transition: 0.3s ease-out;
+            -o-transition: 0.3s ease-out;
+        }
+        
+        .responsive:hover{
+            width: 63%;
+        }
+        
+        
+        @media only screen and (max-width: 500px){
+            .responsive {
+                width: 75%;
+            }
+        }
+
+        
+        div.img{
+            border-radius: 10px;
+            cursor: pointer;   
+        }
+        
+        
+        div.img:hover{
+            border: 2px solid #777;
+        }
+        
+        div.img img{
+            -webkit-border-radius: 10px;
+            -moz-border-radius: 10px;
+            border-radius: 10px;
+            width: 100%;
+        }
+
+/* Background Modal*/
+        .modal{
+            display: none;
+            position:fixed;
+            z-index: 1;
+            padding-top: 100px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(0,0,0);
+            background-color: rgba(0,0,0,0.9);
+            
+        }
+        
+        .modal-content {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 1000px;
+        }
+
+        
+        .close{
+            position:absolute;
+            top:15px;
+            right: 35px;
+            color:white;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        
+        .close:hover,
+        .close:focus{
+            color:#bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        
+        .modal-content{
+            -webkit-animation-name:zoom;
+            -webkit-animation-duration:0.6s;
+            animation-name: zoom;
+            animation-duration: 0.6s;
+        }
+        
+        @-webkit-keyframes zoom{
+            from {transform: scale(0)}
+            to {transform: scale(1)}
+        }
+        
+        @keyframes zoom{
+            from {transform: scale(0)}
+            to {transform: scale(1)}
+        }
+        
+    </style>
+
+
+</head>
+
+<body bgColor=#e6d7ba background="http://voyager.dvc.edu/~slin/2011style/bgpattern.gif">
+
+
+    <link rel="stylesheet" type="text/css" href="../css/main.css">
+    <link rel="stylesheet" type="text/css" href="../css/cources.css">
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+    <script src="../js/jquery-3.2.1.min.js"></script>
+
+
+
+    <header>
+        <div class="container">
+
+            <div class="logo ">
+                <a href="../index.html"> <img src="../img/Chinese-DVC.png" width="250" height="150"></a>
+            </div>
+            <div class="ban ">
+                <a href="../index.html"> <img src="../img/ban_old.jpg" width="565" height="159"></a>
+            </div>
+
+        </div>
+    </header>
+    <nav class="navbar" role="navigation">
+        <div class="">
+            <ul class="navbar ">
+                <li>
+                    <a href="../courses/courses.html"><img src="../img/bottoms/coursesbutton.jpg"></a>
+                    <ul>
+                        <li><a href="../courses/chin120.html">CHIN-120</a></li>
+                        <li><a href="../courses/chin121.html">CHIN-121</a></li>
+                        <li><a href="../courses/chin220.html">CHIN-220</a></li>
+                        <li><a href="../courses/chin221.html">CHIN-221</a></li>
+                        <li><a href="../courses/chin298.html">CHIN-298</a></li>
+                        <li><a href="../courses/chin299.html">CHIN-299</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="../faculty/faculty.html"><img src="../img/bottoms/facultybutton.jpg"></a>
+                </li>
+                <li>
+                    <a href=""><img src="../img/bottoms/speechcontbutton.jpg"></a>
+                    <ul>
+                        <li><a href="../speechcontest/speech.html">Contest Info</a></li>
+                        <li><a href="../showcase/photogallery.html">Picture Gallery</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="../event/upcomingevents.html"><img src="../img/bottoms/upeventsbutton.jpg"></a>
+                </li>
+                <li>
+                    <a href="../studentworks/studentworks.html"><img src="../img/bottoms/studentworkbutton.jpg"></a>
+                </li>
+                <li>
+                    <a href="../chacha/chacha.htm"><img src="../img/bottoms/chachabutton.jpg"></a>
+                </li>
+                <li>
+                    <a href=""><img src="../img/bottoms/helpbutton.jpg"></a>
+                    <ul>
+                        <li><a href="../links.html">Links</a></li>
+                        <li><a href="../help/help and support.htm">Chinese Input</a></li>
+                        <li><a href="../help/webmaster.htm">Web Masters</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+
+<!--Tittle-->
+
+<h1 style="text-align:center" id="top">2017 CLTAC Chinese Speech Contest</h1>
+    <br>
+
+<!--Pictures-->
+
+    <div id="container"></div>
+    <h2 style="text-align:center; padding-top:5px;">To Download Picture :
+    <a href="../speechcontest/2017SpeechPics.zip">Click here</a> </h2>
+    
+<!--The  Modal   -->
+    
+<div id="myModal" class="modal">
+    <span class="close" style="color:white;font-size:40px">x</span>
+    <img class="modal-content" id="img01">
+</div>
+
+<!--  Go to top  -->
+<div class="upButton" id="upButton">
+    <h4>Top</h4>
+</div>
+    
+<!--The Script for Modal-->
+                <script>
+
+// load image from folder
+                   
+//                   var dir = "../speechcontest/2017SpeechPics/CLTAC2017/";
+//                   var fileextension = ".jpg";
+//                   $.ajax({
+//                       type:"GET",
+//                       url: dir,
+//                       success: function(data) {
+//                           console.log(data);
+//                           $(data).find(" a:contains(" + fileextension + ")").each(function(){
+//                               var filename = this.href.replace(window.location.host, "").replace("http://","");
+//                               $("#container").append("<div class = 'responsive'><div class = 'img'><img src='"+filename+"' id='pic'></div></div>");
+//                           });
+//                       }
+//                   });
+                    
+                    var i =1;
+                    var filename = "../speechcontest/2017SpeechPics/CLTAC2017/image";
+                    
+                    for(i=1;i<103;i=i+2){
+                        if(i<10){
+                           var filename = "../speechcontest/2017SpeechPics/CLTAC2017/image00"
+                        }
+                        else if(i<100){
+                            var filename = "../speechcontest/2017SpeechPics/CLTAC2017/image0"
+                        }
+                        else{
+                            var filename = "../speechcontest/2017SpeechPics/CLTAC2017/image"
+                        }
+                        $("#container").append("<div class = 'responsive'><div class = 'img'><img src='"+filename+i+".jpg"+"' id='pic'></div></div>");
+                    }
+                    
+//Zoom animation                    
+                    $(document).ready(function(){
+                    
+                        //get the modal
+                        var modal =document.getElementById('myModal');
+                        //get the span element to close the modal
+                        var span = document.getElementsByClassName("close")[0];
+                        //when the user click the x span close the modal
+                        span.onclick=function()
+                        {
+                            modal.style.display="none";
+                        }
+                        //get all img and insert the click img inside the model
+                        var images = document.getElementsByTagName('img');
+                        var modalImg = document.getElementById("img01");
+                        var i;
+
+                        $(document).on('click', '#pic', function(){
+                            modal.style.display="block";
+                            modalImg.src=this.src;
+                            modalImg.alt=this.alt;
+                        })
+                    })
+                    
+//Go to Top
+                    $(document).ready(function(){
+                    $(window).scroll(function(){
+                        if($(this).scrollTop()>100){
+                            $("#upButton").fadeIn(600);
+                        }
+                        else{
+                            $("#upButton").fadeOut(600);
+                        }
+                    });
+
+                    $("#upButton").click(function(){
+                    $('html, body').animate({
+                        scrollTop: $("#top").offset().top
+                    }, 1500);
+                    return false;
+                });
+
+                });
+
+                </script>
+
+
+</body>
+    
+<hr>
+   <footer>@Diablo Valley College 2017</footer>    
+    
+</html>
