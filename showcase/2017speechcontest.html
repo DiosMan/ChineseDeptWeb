@@ -239,8 +239,20 @@
                         else{
                             var filename = "../speechcontest/2017SpeechPics/CLTAC2017/image"
                         }
-                        $("#container").append("<div class = 'responsive'><div class = 'img'><img src='"+filename+i+".jpg"+"' id='pic'></div></div>");
+                        $("#container").append("<div class = 'responsive'><div class = 'img'><img src='"+filename+i+".jpg"+"' id='pic'class='pics'></div></div>");
                     }
+
+                    $(".pics").each(function(){
+                        var theImage = new Image();
+                        
+                        theImage.src = $(this).attr("src")
+                        theImage.onload = function(){
+                            var imageWidth = theImage.width;
+                        var imageHeight = theImage.height;
+                        console.log(imageHeight, imageWidth);
+                        }
+                        
+                    });
                     
 //Zoom animation                    
                     $(document).ready(function(){
@@ -285,6 +297,7 @@
                 });
 
                 });
+
 
                 </script>
 
