@@ -95,16 +95,16 @@
           $(this).toggleClass("on");                                                           //切换对象类名 即点击对应的LI元素，该元素背景色改变，其它元素背景色恢复
           $(this).siblings().removeAttr("class");                                              //移除同辈元素的CLASS属性，即去除其它LI元素的背景色
       });
-      t = setInterval("showAuto()", 5000); <!-- 5000 是图片的切换时间 -->                                                    //设定运行showAuto()函数的时间间隔 即图片轮播事件的时间间隔
+      t = setInterval("showAuto()", 5000);                                                     //设定运行showAuto()函数的时间间隔 即图片轮播事件的时间间隔
       $("#imageBox").hover(function() {                                                        //鼠标移到图片上，暂停轮播
           clearInterval(t)                                                                     //取消定时操作 参数t 为设定定时操作函数的返回ID
       }, function() {
-          t = setInterval("showAuto()", 5000); <!-- 5000 是图片的切换时间  -->                                                //相当于再设置一个定时器  用于移开鼠标后定时轮播图片需要
+          t = setInterval("showAuto()", 5000);                                                //相当于再设置一个定时器  用于移开鼠标后定时轮播图片需要
       });
     $("#icoBox").hover(function() {                                                            //鼠标移到图片上，暂停轮播
           clearInterval(t)                                                                     //取消定时操作 参数t 为设定定时操作函数的返回ID
       }, function() {
-          t = setInterval("showAuto()", 5000); <!-- 5000 是图片的切换时间  -->                                                //相当于再设置一个定时器  用于移开鼠标后定时轮播图片需要
+          t = setInterval("showAuto()", 5000);                                                //相当于再设置一个定时器  用于移开鼠标后定时轮播图片需要
       });
   })
   
