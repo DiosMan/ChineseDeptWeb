@@ -54,7 +54,7 @@
       </div>
       <div id="titleBox">
           <p class="show"><span>老师寄语</span></p>
-          <p><span>New Course!</span></p>
+          <p ><span><a href="event/upcomingevents.html">click me for more infornation</a></span></p>
           
       </div>
       <div id="icoBox">
@@ -78,42 +78,42 @@
 <script>$("#header").load("./header.html");</script>
 
 <script>
-  var t = n = 0,                                                                             //定义并初始化变量t 设置自动播放的函数返回值（ID）  n 轮播图片序号 
-      count;                                                                                 //定义变量 count 轮播图片总数
+  var t = n = 0,                                                                              
+      count;                                                                                 
       
-  $(document).ready(function() {                                                             //页面载入后执行
-      count = $("#icoBox span").length;                                                    //获取对象数组长度即几个a标签
+  $(document).ready(function() {                                                             
+      count = $("#icoBox span").length;                                                    
     
-      //$("#icoBox span:not(:first-child)").hide();                                          //将a标签中除了第一个之外的，都隐藏
+      //$("#icoBox span:not(:first-child)").hide();                                          
      
-      $("#icoBox span").click(function() {                                                     //列表点击事件
-          var i = $(this).text() - 1;                                                        //获取Li元素内的值，即1，2，3，4  减去1后，赋值给i,数组下标从0开始
-          n = i;                                                                             //将点击对应的值减一后赋值给n
-          if (i >= count) return;                                                            //越界处理
+      $("#icoBox span").click(function() {                                                     
+          var i = $(this).text() - 1;                                                        
+          n = i;                                                                            
+          if (i >= count) return;                                                       
          
-          $("#imageBox img").filter(":visible").fadeOut(500).parent().children().eq(i).fadeIn(1000);  //将当前显示的图片淡出，将点击对应序号的图片淡入
+          $("#imageBox img").filter(":visible").fadeOut(500).parent().children().eq(i).fadeIn(1000);  
          $("#titleBox p").filter(":visible").fadeOut(500).parent().children().eq(i).fadeIn(1000);
          $("#titleBox p").eq(i).toggleClass("show"); 
       $("#titleBox p").eq(i).siblings().removeAttr("class"); 
-          $(this).toggleClass("on");                                                           //切换对象类名 即点击对应的LI元素，该元素背景色改变，其它元素背景色恢复
-          $(this).siblings().removeAttr("class");                                              //移除同辈元素的CLASS属性，即去除其它LI元素的背景色
+          $(this).toggleClass("on");                                                           
+          $(this).siblings().removeAttr("class");                                              
       });
-      t = setInterval("showAuto()", 5000);                                                     //设定运行showAuto()函数的时间间隔 即图片轮播事件的时间间隔
-      $("#imageBox").hover(function() {                                                        //鼠标移到图片上，暂停轮播
-          clearInterval(t)                                                                     //取消定时操作 参数t 为设定定时操作函数的返回ID
+      t = setInterval("showAuto()", 5000);                                                     
+      $("#imageBox").hover(function() {                                                        
+          clearInterval(t)                                                                    
       }, function() {
-          t = setInterval("showAuto()", 5000);                                                //相当于再设置一个定时器  用于移开鼠标后定时轮播图片需要
+          t = setInterval("showAuto()", 5000);                                               
       });
-    $("#icoBox").hover(function() {                                                            //鼠标移到图片上，暂停轮播
-          clearInterval(t)                                                                     //取消定时操作 参数t 为设定定时操作函数的返回ID
+    $("#icoBox").hover(function() {                                                            
+          clearInterval(t)                                                                    
       }, function() {
-          t = setInterval("showAuto()", 5000);                                                //相当于再设置一个定时器  用于移开鼠标后定时轮播图片需要
+          t = setInterval("showAuto()", 5000);                                               
       });
   })
   
-  function showAuto() {                                                                         //轮播操作
-      n = n >= (count - 1) ? 0 : ++n;                                                           //当播放到最后一张图片后，播放第一张图片，否则，播放下一张图片
-      $("#icoBox span").eq(n).trigger('click');                                                   //触发点击LI事件
+  function showAuto() {                                                                       
+      n = n >= (count - 1) ? 0 : ++n;                                                           
+      $("#icoBox span").eq(n).trigger('click');                                                  
   }
   </script>
 	
