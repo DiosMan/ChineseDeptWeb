@@ -149,8 +149,8 @@ footer{
 /*---------------------------*/
 
 #imageRotation{
-    height:270px;
-    width:570px;
+    height:400px;
+    width:700px;
     overflow:hidden;  /*--超出容器的所有元素都不可见--*/
     position:relative;  /*--相对定位--*/
 	
@@ -162,15 +162,15 @@ footer{
 /*-------------图片容器---------------*/
 #imageBox{
     position:absolute;  /*--固定定位--*/
-    height:270px;
+    height:400px;
     top:0px;
     left:0px;
     overflow:hidden;
     }
 #imageBox img {
     display:block;
-    height:270px;
-    width:570px;
+    height:400px;
+    width:700px;
     float:left;
     border:none;
     }
@@ -178,7 +178,7 @@ footer{
 #titleBox{
     position:absolute;  /*--固定定位--*/
     bottom:20px;
-    width:570px;
+    width:700px;
     height:40px;
     overflow:hidden;
 	z-index:98;
@@ -186,8 +186,8 @@ footer{
 #titleBox p{
     position:relative;   /*--固定定位--*/
     top:100px;
-	left:0px;
-    width:550px;
+    left:0px;
+    width:700px;
     height:30px;
     margin:0px;
     padding:0px 10px;
@@ -215,8 +215,8 @@ footer{
 /*-------------图标容器---------------*/
 #icoBox{
     position:absolute;  /*--固定定位--*/
-    left:215px;
-	bottom:5px;
+    left:350px;
+    bottom:5px;
     
     width:146px;
     height:20px;
